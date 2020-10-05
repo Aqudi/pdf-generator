@@ -1,0 +1,46 @@
+.page {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border-radius: 5px;
+    border: 1px #D3D3D3 solid;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.subpage {
+    padding: 1cm;
+    height: 256mm;
+    outline: 2cm #FFEAEA solid;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    justify-self: center;
+}
+
+.label {
+    text-align: start;
+    padding-right: 1rem;
+}
+
+@page {
+    size: A4;
+    margin: 27mm 16mm 27mm 16mm;
+ }
+
+@media print {
+    .page {
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+    }
+}
