@@ -1,0 +1,23 @@
+<div style="margin:0 auto;width: 15rem; display:flex; flex-direction:column; justify-content:center">
+    <div>
+        <form>
+            <p>First name: <input type="text" name="name" [(ngModel)]="name"></p>
+            <p>Last name: <input type="text" name="lname" [(ngModel)]="organization"></p>
+        </form>
+    </div>
+    <button (click)="capture()">캡쳐하기 (아래로 스크롤)</button>
+    <button (click)="print()">pdf로 저장하기</button>
+</div>
+<br>
+
+<div id="capture" class="page">
+    <div class="subpage">
+        <h1 class="title">봉사활동 확인서</h1>
+        <br><br><br>
+        <p>이름 : {{name}}</p>
+        <p>소속 : {{organization}}</p>
+    </div>
+</div>
+
+<h2>Captured Image</h2>
+<img src={{capturedImage}}>
